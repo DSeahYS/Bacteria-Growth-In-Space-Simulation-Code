@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.main-content {
+    width: 70%;
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+#filtrationStatus {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+canvas {
+    max-width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+#videoContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#analysisTools {
+    margin-top: 20px;
+}
+
+#statistics p {
+    font-size: 1.1em;
+}
+
+#dataDisplay {
+    margin-top: 20px;
+}
+
+#dataDisplay table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#dataDisplay th, #dataDisplay td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#dataDisplay th {
+    background-color: #f2f2f2;
+}
+
+#infographics {
+    margin-top: 20px;
+}
+
+#infographics img {
+    display: block;
+    margin: 0 auto;
+}
+
+#formulas {
+    margin-top: 20px;
+}
+
+#formulas ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#formulas li {
+    margin-bottom: 15px;
+}
+
+#formulas strong {
+    font-size: 1.1em;
+}
+
+button {
+    margin: 5px 0;
+    padding: 10px 15px;
+    font-size: 1em;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}

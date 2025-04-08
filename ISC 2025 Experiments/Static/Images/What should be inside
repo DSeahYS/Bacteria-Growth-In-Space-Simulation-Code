@@ -1,0 +1,18 @@
+# bacteria_simulation/
+# ├── app.py
+# ├── templates/
+# │   └── index.html
+# ├── static/
+#     ├── css/
+#     │   └── styles.css
+#     ├── js/
+#     │   └── script.js
+#     ├── images/
+#     │   ├── ecoli.jpg
+#     │   ├── legionella.jpg
+#     │   ├── staph_aureus.jpg
+#     │   ├── bacterial_population_growth.png
+#     │   ├── aerosol_concentration_dynamics.png
+#     │   └── filtration_efficiency.png
+#     └── videos/
+ #        └── your_video.mp4

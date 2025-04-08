@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bacteria Growth and Aerosol Simulation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js Annotation plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar with controls and charts -->
+        <div class="sidebar">
+            <h2>Simulation Controls</h2>
+            <label for="bacteriaSelect">Select Bacteria Type:</label>
+            <select id="bacteriaSelect">
+                {% for key, bacteria in bacteria_types.items() %}
+                <option value="{{ key }}">{{ bacteria.name }}</option>
+                {% endfor %}
+            </select>
+            <button id="startButton">Start Simulation</button>
+            <button id="pauseButton">Pause Simulation</button>
+            <button id="resetButton">Reset Simulation</button>
+            <p id="filtrationStatus">Filtration Status: Inactive</p>
+            <canvas id="bacteriaChart"></canvas>
+            <canvas id="growthRateChart"></canvas>
+            <canvas id="aerosolChart"></canvas>
+        </div>
+        <!-- Main content area for video and analysis -->
+        <div class="main-content">
+            <h1>Bacteria Growth and Aerosol Simulation</h1>
+            <!-- Placeholder for your video -->
+            <div id="videoContainer">
+                <!-- Embed your video here -->
+                <video width="640" height="480" controls>
+                    <source src="{{ url_for('static', filename='videos/your_video.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Analysis Tools and Infographics -->
+            <div id="analysisTools">
+                <h2>Analysis Tools</h2>
+                <div id="statistics">
+                    <h3>Statistics</h3>
+                    <p id="maxBacteria">Max Bacteria Count: N/A</p>
+                    <p id="timeToThreshold">Time to Reach Upper Threshold: N/A</p>
+                    <p id="totalFiltrationTime">Total Filtration Time: N/A</p>
+                    <p id="cumulativeReduction">Cumulative Bacteria Reduction: N/A</p>
+                </div>
+                <div id="dataDisplay">
+                    <h3>Simulation Data</h3>
+                    <button id="downloadDataButton">Download Data as CSV</button>
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Time (hours)</th>
+                                <th>Bacteria Count (N(t))</th>
+                                <th>Aerosol Concentration (C(t))</th>
+                                <th>Filtration Active</th>
+                                <th>Filtration Efficiency (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data rows will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="infographics">
+                    <h3>Infographics</h3>
+                    <img id="bacteriaImage" src="" alt="Bacteria Image" width="200">
+                    <p id="bacteriaDescription"></p>
+                </div>
+                <!-- Formulas Section -->
+                <div id="formulas">
+                    <h3>Formulas Used</h3>
+                    <ul>
+                        <li>
+                            <strong>Bacterial Population Growth:</strong>
+                            <br>
+                            <!-- Placeholder for Bacterial Population Growth Formula Image -->
+                            <img src="{{ url_for('static', filename='images/bacterial_population_growth.png') }}" alt="Bacterial Population Growth Formula" width="300">
+                        </li>
+                        <li>
+                            <strong>Aerosol Concentration Dynamics:</strong>
+                            <br>
+                            <!-- Placeholder for Aerosol Concentration Dynamics Formula Image -->
+                            <img src="{{ url_for('static', filename='images/aerosol_concentration_dynamics.png') }}" alt="Aerosol Concentration Dynamics Formula" width="300">
+                        </li>
+                        <li>
+                            <strong>UV Disinfection Model:</strong>
+                            <br>
+                            <!-- Placeholder for UV Disinfection Formula Image -->
+                            <img src="{{ url_for('static', filename='images/uv_disinfection_formula.png') }}" alt="UV Disinfection Formula" width="300">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

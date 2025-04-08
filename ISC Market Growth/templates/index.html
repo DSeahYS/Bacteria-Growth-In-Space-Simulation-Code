@@ -1,0 +1,250 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAPARIS Market Growth Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <h1 class="logo"><a href="#">LAPARIS</a></h1>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#market-analysis">Market Analysis</a></li>
+                <li><a href="#competitive-advantage">Competitive Analysis</a></li>
+                <li><a href="#business-projections">Business Projections</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="showcase">
+        <div class="container">
+            <h1>Advanced Air Purification Solutions with LAPARIS</h1>
+            <p>Harnessing AI-driven technology for superior infection control and air quality management.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <div class="container">
+                <h2>Introduction</h2>
+                <p>The global market for air purification systems is rapidly expanding due to increased awareness of airborne pathogens and the critical need for effective infection control solutions. The LAPARIS system is at the forefront of this growth, offering advanced AI-driven air purification technology that adapts to real-time environmental conditions.</p>
+            </div>
+        </section>
+
+        <section id="market-analysis" class="bg-light">
+            <div class="container">
+                <h2>Market Analysis</h2>
+                <p>The air purifier market is projected to grow significantly over the next decade, driven by health concerns, regulatory changes, and technological advancements. Below is a graph illustrating the projected global air purifier market size from 2020 to 2030.</p>
+                <canvas id="marketGrowthChart"></canvas>
+            </div>
+        </section>
+
+        <section id="competitive-advantage">
+            <div class="container">
+                <h2>Competitive Analysis</h2>
+                <p>The air purification market includes several key players. The following graph provides a detailed comparison of LAPARIS with major competitors based on critical features and capabilities.</p>
+                <canvas id="competitiveAnalysisChart"></canvas>
+                <div class="comparison-table">
+                    <h3>Feature Comparison</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>LAPARIS</th>
+                                <th>Honeywell</th>
+                                <th>Daikin</th>
+                                <th>Blueair</th>
+                                <th>IQAir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AI-Driven Adaptability</td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                                <td><i class="fas fa-times-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Real-Time Pathogen Detection</td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-times-circle"></i></td>
+                                <td><i class="fas fa-times-circle"></i></td>
+                                <td><i class="fas fa-times-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Energy Optimization</td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Scalability and Customization</td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-times-circle"></i></td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Data Analytics and Reporting</td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                                <td><i class="fas fa-times-circle"></i></td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>HEPA Filtration</td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>UV-C Irradiation</td>
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td><i class="fas fa-times-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                                <td><i class="fas fa-times-circle"></i></td>
+                                <td><i class="fas fa-minus-circle"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="business-projections" class="bg-light">
+            <div class="container">
+                <h2>Business Projections</h2>
+                <p>Based on current market trends and LAPARIS's strategic positioning, we project significant growth in revenue and market share over the next decade.</p>
+                <canvas id="revenueProjectionsChart"></canvas>
+                <canvas id="marketShareOverTimeChart"></canvas>
+                <div class="revenue-table">
+                    <h3>Projected Revenue Streams (2024-2033)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>System Sales ($ Million)</th>
+                                <th>Maintenance Contracts ($ Million)</th>
+                                <th>Data Analytics ($ Million)</th>
+                                <th>Total Revenue ($ Million)</th>
+                                <th>LAPARIS Market Share (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024</td>
+                                <td>5</td>
+                                <td>0.5</td>
+                                <td>0.5</td>
+                                <td>6</td>
+                                <td>0.05</td>
+                            </tr>
+                            <tr>
+                                <td>2025</td>
+                                <td>15</td>
+                                <td>2</td>
+                                <td>1.5</td>
+                                <td>18.5</td>
+                                <td>0.16</td>
+                            </tr>
+                            <tr>
+                                <td>2026</td>
+                                <td>30</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>38</td>
+                                <td>0.27</td>
+                            </tr>
+                            <tr>
+                                <td>2027</td>
+                                <td>50</td>
+                                <td>8</td>
+                                <td>5</td>
+                                <td>63</td>
+                                <td>0.38</td>
+                            </tr>
+                            <tr>
+                                <td>2028</td>
+                                <td>75</td>
+                                <td>12.5</td>
+                                <td>7.5</td>
+                                <td>95</td>
+                                <td>0.49</td>
+                            </tr>
+                            <tr>
+                                <td>2029</td>
+                                <td>100</td>
+                                <td>20</td>
+                                <td>10</td>
+                                <td>130</td>
+                                <td>0.60</td>
+                            </tr>
+                            <tr>
+                                <td>2030</td>
+                                <td>125</td>
+                                <td>30</td>
+                                <td>12.5</td>
+                                <td>167.5</td>
+                                <td>0.72</td>
+                            </tr>
+                            <tr>
+                                <td>2031</td>
+                                <td>150</td>
+                                <td>40</td>
+                                <td>15</td>
+                                <td>205</td>
+                                <td>0.84</td>
+                            </tr>
+                            <tr>
+                                <td>2032</td>
+                                <td>200</td>
+                                <td>50</td>
+                                <td>20</td>
+                                <td>270</td>
+                                <td>0.96</td>
+                            </tr>
+                            <tr>
+                                <td>2033</td>
+                                <td>375</td>
+                                <td>50</td>
+                                <td>25</td>
+                                <td>450</td>
+                                <td>1.10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <div class="container">
+                <h2>Conclusion</h2>
+                <p>LAPARIS is uniquely positioned to revolutionize the air purification market with its advanced AI-driven technology and comprehensive feature set. By targeting key sectors and leveraging its competitive advantages, LAPARIS aims to achieve significant market penetration and contribute substantially to improving public health globally.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LAPARIS Project Team</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

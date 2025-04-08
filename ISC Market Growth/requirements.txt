@@ -1,0 +1,6 @@
+Flask==2.3.2
+pandas==2.1.1
+numpy==1.25.2
+matplotlib==3.7.2        # For any backend chart generation
+Chart.js==3.9.1          # If using Python to integrate Chart.js via CDN (optional)
+gunicorn==21.2.0         # If deploying to a production environment (optional)

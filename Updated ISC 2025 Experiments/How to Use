@@ -1,0 +1,3 @@
+# Please make sure to place the images for the bacteria in the static/images/ directory with the correct filenames
+# (ecoli.jpg, legionella.jpg, staph_aureus.jpg), and your video in the static/videos/ directory as your_video.mp4 or
+# adjust the paths accordingly.

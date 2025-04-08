@@ -1,0 +1,69 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAPARIS Business Projections & Market Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header id="showcase">
+        <div class="container">
+            <h1>LAPARIS Business Projections & Market Analysis</h1>
+            <p>Projected Growth and Market Insights for LAPARIS (2024-2033)</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="business-projections">
+            <div class="container">
+                <h2>Projected Revenue Streams (2024-2033)</h2>
+                <div class="charts">
+                    <canvas id="revenueProjectionsChart"></canvas>
+                    <canvas id="marketShareOverTimeChart"></canvas>
+                </div>
+                <div class="revenue-table">
+                    <h3>Projected Revenue Details</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Earth Units Sold</th>
+                                <th>Space Units Sold</th>
+                                <th>System Sales (Earth) ($)</th>
+                                <th>System Sales (Space) ($)</th>
+                                <th>Maintenance Contracts (Earth) ($)</th>
+                                <th>Maintenance Contracts (Space) ($)</th>
+                                <th>Data Analytics (Earth) ($)</th>
+                                <th>Data Analytics (Space) ($)</th>
+                                <th>Total Revenue ($)</th>
+                                <th>Global Market Size ($ Billion)</th>
+                                <th>LAPARIS Market Share (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="revenue-table-body">
+                            <!-- Dynamic rows will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="market-analysis" class="bg-light">
+            <div class="container">
+                <h2>Market Analysis</h2>
+                <p>The air purifier market is projected to grow significantly over the next decade, driven by health concerns, regulatory changes, and technological advancements. Below is a graph illustrating the projected global air purifier market size from 2020 to 2030.</p>
+                <canvas id="marketGrowthChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LAPARIS Project Team</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
